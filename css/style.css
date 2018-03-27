@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial"; }
+
+body {
+  background: #ffffff; }
+
+.registro {
+  background-image: url("../img/tienda-online.jpg");
+  background-repeat: round;
+  background-size: cover;
+  height: 657px;
+  width: 100%;
+  margin-top: 0px;
+  position: fixed; }
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999; }
+
+.fondo {
+  background-image: url("../img/interes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+  background-position-y: -225px;
+  margin-top: -20px;
+  position: fixed; }
+
+.opacity {
+  height: 800px;
+  position: absolute;
+  background: #000;
+  opacity: 0.4;
+  width: 100%; }
+
+.firstColumnFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap; }
+
+.textoFondo {
+  position: absolute;
+  width: 400px;
+  top: 170px;
+  left: 30px;
+  z-index: 1;
+  color: #ffffff; }
+
+.firstColumnFlex {
+  position: absolute;
+  top: 436px;
+  overflow: hidden; }
+  .firstColumnFlex .img {
+    padding: 20px;
+    background: #565063;
+    margin: 20px; }
+    .firstColumnFlex .img p {
+      color: #cdc9c9;
+      margin-top: 5px; }
+    .firstColumnFlex .img img {
+      width: 100%; }
+
+.principal {
+  overflow: hidden;
+  position: relative;
+  top: 436px;
+  padding-top: 10px; }
+
+.flexboxColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap; }
+
+.container .sidebar {
+  background: #ddd; }
+
+.container .contenido {
+  background: #fff; }
+
+.container .right {
+  background: #ccc; }
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap; }
+
+.flexbox .img {
+  border-radius: 6px;
+  border: 3px solid #f3ebeb;
+  margin: 4px; }
+
+.img {
+  width: 100%;
+  padding: 10px; }
+  .img img {
+    width: 100%;
+    margin-bottom: 5px; }
+    .img img:hover {
+      box-shadow: 0px 0px 80px #000000;
+      z-index: 2;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      transform: scale(1.2); }
+
+.img p {
+  display: inline-block !important; }
+
+.glyphicon-star {
+  color: #f5dd0f; }
+
+.glyphicon-thumbs-up:hover {
+  cursor: pointer;
+  font-size: 15px; }
+
+.glyphicon-thumbs-down:hover {
+  cursor: pointer;
+  font-size: 15px; }
+
+.glyphicon-star:hover {
+  cursor: pointer;
+  font-size: 15px; }
+
+.right .img p .btn-lg {
+  font-size: 14px !important; }
+
+#myCarousel {
+  border-radius: 3px;
+  border: 3px solid #f3ebeb; }
+
+.carousel-inner .item img {
+  width: 100%; }
+
+.right .carousel-control {
+  background: transparent; }
+
+.wrap {
+  width: 50%;
+  max-width: 500px;
+  margin: auto;
+  top: 35px;
+  right: 135px;
+  position: absolute; }
+
+.wrap form {
+  width: 100%;
+  margin: 20px 0px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 3px grey;
+  border-top: 4px solid #536DFE;
+  padding: 20px 20px; }
+
+.wrap2 {
+  width: 50%;
+  max-width: 500px;
+  margin: auto;
+  top: 150px;
+  right: 135px;
+  position: absolute; }
+
+.wrap2 form {
+  width: 100%;
+  margin: 20px 0px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 3px grey;
+  border-top: 4px solid #536DFE;
+  padding: 20px 20px; }
+
+main .wrap .formText {
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  color: #000;
+  margin-bottom: 20px;
+  max-width: 100%; }
+
+main .wrap2 .formText {
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  color: #000;
+  margin-bottom: 20px;
+  max-width: 100%; }
+
+main .wrap form input[type="submit"] {
+  margin: 20px auto; }
+
+main .wrap2 form input[type="submit"] {
+  margin: 20px auto; }
+
+.textarea .form-control {
+  max-width: 30px; }
+
+.pager {
+  margin: 7px 10px !important; }
+
+.nav .navbar-nav {
+  margin: 20px 0; }
+
+.navbar-form .navbar-left {
+  margin: 20px 0; }
+
+/*# sourceMappingURL=style.css.map */
