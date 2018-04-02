@@ -5,7 +5,7 @@ session_destroy();
 
 $_SESSION = array();
 
-header('Location: http://localhost/php/magazineV3/magazineV3/iniciar-sesion.php');
+header('Location: http://localhost/php/tienda/iniciar-sesion.php');
 ?>
 
 <!DOCTYPE html>

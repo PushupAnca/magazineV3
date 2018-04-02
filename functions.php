@@ -1,6 +1,8 @@
 
 <?php 
 
+session_start();
+
 function validarNombre($nombre){
 		if (!empty($nombre)) {
 		$nombre1 = trim($nombre);

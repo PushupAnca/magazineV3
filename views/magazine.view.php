@@ -1,16 +1,20 @@
 <?php 
 
-session_start();
-$_SESSION['nombre'] = 'Ana';
+// session_start();
+
+if (isset($_COOKIE['color'])) {
+	$color = htmlspecialchars($_COOKIE['color']);  // La function htmlspecialchars() es para proteccion 
+} else {
+	$color = '#6b7477';
+}
+
+$_SESSION['nombre'] = '';
 
 if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferentes paginas y mantener su valor en cada una de ellas.
 	$nombre = $_SESSION['nombre'];
 } else {
 	echo "No has iniciado sesion";
 }
-
-
-
 
 
 ?>
@@ -24,12 +28,25 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 	<meta meta="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="css/estilosPaginacion.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link src="js/jquery.min.js">
     <script src="js/jquery.js"></script>
+    <style type="text/css">
+    	p{
+    		color: <?php echo $color?>;
+    	}
+
+    	.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+    		width: 100%;
+    	}
+    	.container .right{
+    		background: transparent;
+    	}
+    </style>
 </head>
 <body>
 
@@ -66,7 +83,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 
      <section class="fondo">
 		<div class="textoFondo">
-			<h1>Tu tienda on line</h1>
+			<h1>Tu &laquo;tienda on &raquo; line</h1>
 			<p>Lorem ipsum dolore nisi occaecat laborum tempor sed anim sit dolor reprehenderit pariatur cupidatat cupidatat consectetur laborum velit anim.</p>
 		</div>
 		<div class="opacity"></div>
@@ -74,7 +91,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 
 	<section class="firstColumnFlex col-lg-12">
 				<div class="img">
-					<img src="img/crema.jpg">
+					<img src="../img/crema.jpg">
 					 <p>Descripción del producto. Magna eu in proident magna cillum cupidatat velit pariatur quis nisi quis do.
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -82,7 +99,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					 </p> 
 				</div>
 				<div class="img">
-					<img src="img/crema.jpg">
+					<img src="../img/crema.jpg">
 					<p>Descripción del producto. Magna eu in proident magna cillum cupidatat velit pariatur quis nisi quis do.
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -90,7 +107,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					 </p> 
 				</div>
 				<div class="img">
-					<img src="img/crema.jpg">
+					<img src="../img/crema.jpg">
 					<p>Descripción del producto. Magna eu in proident magna cillum cupidatat velit pariatur quis nisi quis do.
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -98,7 +115,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					 </p> 
 				</div>
 				<div class="img">
-					<img src="img/crema.jpg">
+					<img src="../img/crema.jpg">
 					<p>Descripción del producto. Magna eu in proident magna cillum cupidatat velit pariatur quis nisi quis do.
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -123,7 +140,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 		<section class="contenido flexboxColumn col-lg-8">
 			<div class=" flexbox">
 				<div class="img">
-					<img src="img/img1.jpg">
+					<img src="../img/img1.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -138,7 +155,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/crema.jpg">
+					<img src="../img/crema.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -153,7 +170,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/gestion.jpg">
+					<img src="../img/gestion.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -168,7 +185,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/Global.jpg">
+					<img src="../img/Global.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -185,7 +202,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 			</div>
 			<div class=" flexbox">
 				<div class="img">
-					<img src="img/provedor.jpg">
+					<img src="../img/provedor.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -200,7 +217,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/solar.jpg">
+					<img src="../img/solar.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -215,7 +232,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/usuarios.jpg">
+					<img src="../img/usuarios.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -230,7 +247,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/img1.jpg">
+					<img src="../img/img1.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -246,7 +263,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				</div>
 			</div>
 			<div>
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -257,26 +274,26 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="img/img3.jpg" alt="Chania">
+      <img src="../img/4e.jpg" alt="Chania">
       <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>LA is always so much fun!</p>
+        <h3>Productos</h3>
+        <p>La mejor marca</p>
       </div>
     </div>
 
     <div class="item">
-      <img src="img/img4.jpg" alt="Chicago">
+      <img src="../img/comprar.jpg" alt="Chicago">
       <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
+        <h3>Productos</h3>
+        <p>Thank you, Productos!</p>
       </div>
     </div>
 
     <div class="item">
-      <img src="img/img5.jpg" alt="New York">
+      <img src="../img/zakupy.jpg" alt="New York">
       <div class="carousel-caption">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
+        <h3>Productos</h3>
+        <p>La mejor marca</p>
       </div>
     </div>
   </div>
@@ -292,9 +309,11 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
   </a>
 </div>
 			</div>
+
+
 			<div class=" flexbox">
 				<div class="img">
-					<img src="img/img1.jpg">
+					<img src="../img/img1.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -309,7 +328,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/img1.jpg">
+					<img src="../img/img1.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -324,7 +343,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/img1.jpg">
+					<img src="../img/img1.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -339,7 +358,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 				<div class="img">
-					<img src="img/img1.jpg">
+					<img src="../img/img1.jpg">
 					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
 					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
 					<p>Nombre producto
@@ -354,134 +373,17 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				    </div>
 				</div>
 			</div>
-			<div class=" flexbox">
-				<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-				<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-				<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-				<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-			</div>
-			<div class=" flexbox">
-				<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-				<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-			<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-				<div class="img">
-					<img src="img/img1.jpg">
-					<p><span class="glyphicon glyphicon-thumbs-up"></span></p>
-					<p><span class="glyphicon glyphicon-thumbs-down"></span></p>      
-					<p>Nombre producto
-				        <button type="button" class="btn btn-default btn-sm">
-				          <span class="glyphicon glyphicon-shopping-cart"></span>Agregar al carrito
-				        </button>
-				    </p>
-				    <div class="estrellas">
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    	<p><span class="glyphicon glyphicon-star"></span></p>
-				    </div>
-				</div>
-			</div>
+			
+		
+
+
+
+
+
 		</section>
 		<section class="right flexboxColumn col-lg-2">
 				<div class="img">
-					<img src="img/img2.jpg">
+					<img src="../img/img2.jpg">
 					 <p>Productos relacionados
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -489,7 +391,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					 </p> 
 				</div>
 				<div class="img">
-					<img src="img/img2.jpg">
+					<img src="../img/img2.jpg">
 					<p>Productos relacionados
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -497,7 +399,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					 </p> 
 				</div>
 				<div class="img">
-					<img src="img/img2.jpg">
+					<img src="../img/img2.jpg">
 					<p>Productos relacionados
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -505,7 +407,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					 </p> 
 				</div>
 				<div class="img">
-					<img src="img/img2.jpg">
+					<img src="../img/img2.jpg">
 					<p>Descripción del producto
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
@@ -514,6 +416,55 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 				</div>
 		</section>
 	</div>
+
+	<div class="contenedor">
+		<h1>Articulos</h1>
+		<section class="articulos">
+			<ul>
+				<?php foreach ($articulos as $articulo): ?>
+					<li><?php echo $articulo['id']  ?></li>
+				<?php endforeach; ?>
+			</ul>
+		</section>
+
+		<section class="paginacion">
+			<ul>
+				<!-- Establecemos cuando el boton de "Anterior" estara desabilitado -->
+				<?php if ($pagina == 1): ?>
+					<li class="disabled">&laquo;</li>
+				<?php else: ?>
+					<li><a href="?pagina=<?php echo $pagina - 1 ?>">&laquo;</a></li>
+				<?php endif; ?>
+
+				<!-- Ejecutamos un ciclo para mostrar las paginas -->
+				<?php 
+				for ($i=1; $i <= $numeroPaginas ; $i++) { 
+					if ($pagina == $i) {
+						echo "<li class='active'><a href='?pagina=$i'>$i</a></li>";
+					} else {
+						echo "<li><a href='?pagina=$i'>$i</a></li>";
+					}
+				}
+				?>
+
+				<!-- Establecemos cuando el boton de "Siguiente" estara desabilitado -->
+				<!-- $pagina == $numeroPaginas SIGNIFICA QUE ESTAMOS EN LA ULTIMA PAGINA -->
+				<?php if ($pagina == $numeroPaginas): ?>
+					<li class="disabled">&raquo;</li>
+				<?php else: ?>
+					<li><a href="?pagina=<?php echo $pagina + 1 ?>">&raquo;</a></li>
+				<?php endif; ?>
+			</ul>
+		</section>
+	</div>
+
+
+
+
+
+
+
+
 </main>
 
 

@@ -20,7 +20,20 @@ $_SESSION['nombre'] = '';
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link src="js/jquery.min.js">
     <script src="js/jquery.js"></script>
+    <style type="text/css">
+    
+     .carousel-inner>.item>a>img, .carousel-inner>.item>img{
+      width: 100%;
+     }
+     .pager{
+      margin-bottom: 0px;
+     } 
+    .navbar-default .navbar-nav>.active>a:hover{
+      background: #ca82ad;
+    }
+    </style>
 </head>
+
 <body>
 
  <ul class="pager">
@@ -40,9 +53,15 @@ $_SESSION['nombre'] = '';
       </button>
     
     </div>
+     <div class="collapse navbar-collapse col-lg-4" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="../sobre_nosotros.php">Sobre nosotros</a></li>
+       
+      </ul>
+    </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="magazine.php">Magazine</a></li>
+        <li class="active"><a href="../magazine.php">Magazine</a></li>
         <li class=""><a href="#shooper">Shooper</a></li>
         <li class=""><a href="#desfiles">Desfiles</a></li>
         <li class=""><a href="#contact">CONTACT</a></li>
@@ -63,7 +82,7 @@ $_SESSION['nombre'] = '';
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item">
-        <img src="img/zakupy.jpg" alt="Nuestra tienda" width="1200" height="700">
+        <img src="../img/zakupy.jpg" alt="Nuestra tienda" width="1200" height="700">
         <div class="carousel-caption">
           <h3>Nuestra tienda</h3>
           <p>Desde 22 Marzo 2018</p>
@@ -71,7 +90,7 @@ $_SESSION['nombre'] = '';
       </div>
 
       <div class="item">
-        <img src="img/comprar.jpg" alt="Chicago" width="1200" height="700">
+        <img src="../img/comprar.jpg" alt="Chicago" width="1200" height="700">
         <div class="carousel-caption">
           <h3>Fotos tienda</h3>
           <p>Desde 22 Marzo 2018</p>
@@ -79,7 +98,7 @@ $_SESSION['nombre'] = '';
       </div>
     
       <div class="item active">
-        <img src="img/4e.jpg" alt="Los Angeles" width="1200" height="700">
+        <img src="../img/4e.jpg" alt="Los Angeles" width="1200" height="700">
         <div class="carousel-caption">
           <h3>Desde 22 Marzo 2018</h3>
           <p>Eventos Magazine 2018</p>
@@ -106,7 +125,7 @@ $_SESSION['nombre'] = '';
     <div class="col-sm-4">
       <p class="text-center"><strong>Ankle strap</strong></p><br>
       <a href="#demo" data-toggle="collapse">
-        <img src="img/Global.jpg" class="img person" alt="Descripción producto" width="255" height="255">
+        <img src="../img/Global.jpg" class="img person" alt="Descripción producto" width="255" height="170">
       </a>
       <div id="demo" class="collapse">
         <p>Zapato piel</p>
@@ -117,7 +136,7 @@ $_SESSION['nombre'] = '';
     <div class="col-sm-4">
       <p class="text-center"><strong>Bluchers</strong></p><br>
       <a href="#demo2" data-toggle="collapse">
-        <img src="img/Global.jpg" class="img person" alt="Descripción producto" width="255" height="255">
+        <img src="../img/Global.jpg" class="img person" alt="Descripción producto" width="255" height="170">
       </a>
       <div id="demo2" class="collapse">
         <p>Zapato piel</p>
@@ -128,7 +147,7 @@ $_SESSION['nombre'] = '';
     <div class="col-sm-4">
       <p class="text-center"><strong>Botines</strong></p><br>
       <a href="#demo3" data-toggle="collapse">
-        <img src="img/Global.jpg" class="img person" alt="Descripción producto" width="255" height="255">
+        <img src="../img/Global.jpg" class="img person" alt="Descripción producto" width="255" height="170">
       </a>
       <div id="demo3" class="collapse">
         <p>Zapato piel</p>
@@ -143,16 +162,11 @@ $_SESSION['nombre'] = '';
   <div class="container">
     <h3 class="text-center">Desfiles</h3>
     <p class="text-center">Cada temporada y cada vez que nos necesites<br> Acompañanos en este viaje<br><br></p>
-    <!-- <ul class="list-group">
-      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
-      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li> 
-      <li class="list-group-item">November <span class="badge">3</span></li> 
-    </ul> -->
     
     <div class="row text-center">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="img/crema.jpg" alt="Paris" width="400" height="300">
+          <img src="../img/crema.jpg" alt="Paris" width="400" height="300">
           <p><strong>Paris</strong></p>
           <p>Desde 22 Marzo 2018</p>
           <button class="btn" data-toggle="modal" data-target="#myModal">Comprar Product</button>
@@ -160,7 +174,7 @@ $_SESSION['nombre'] = '';
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="img/crema.jpg" alt="Fotos tienda" width="400" height="300">
+          <img src="../img/crema.jpg" alt="Fotos tienda" width="400" height="300">
           <p><strong>London</strong></p>
           <p>Desde 22 Marzo 2018</p>
           <button class="btn" data-toggle="modal" data-target="#myModal">Comprar Product</button>
@@ -168,7 +182,7 @@ $_SESSION['nombre'] = '';
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="img/crema.jpg" alt="San Francisco" width="400" height="300">
+          <img src="../img/crema.jpg" alt="San Francisco" width="400" height="300">
           <p><strong>Chicago</strong></p>
           <p>Desde 22 Marzo 2018</p>
           <button class="btn" data-toggle="modal" data-target="#myModal">Comprar Product</button>
@@ -233,7 +247,7 @@ $_SESSION['nombre'] = '';
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required="">
         </div>
       </div>
-      <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" rows="5"></textarea>
+      <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" style="max-width: 750px;"></textarea>
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
@@ -268,7 +282,7 @@ $_SESSION['nombre'] = '';
 
 
 <footer class="text-center">
-    <p>Magazine by <a href="https://github.com/PushupAnca/magazineV2" target="_blank" data-toggle="tooltip" title="" data-original-title="">Ana Maria Timsa</a></p> 
+    <p>Magazine by <a href="https://github.com/PushupAnca/tienda" target="_blank" data-toggle="tooltip" title="" data-original-title="">Ana Maria Timsa</a></p> 
 </footer>
 
 

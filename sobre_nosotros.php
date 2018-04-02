@@ -1,7 +1,9 @@
-<?php 
+<?php
+
+session_start();
 
 
-$_SESSION['nombre'] = 'Ana';
+// $_SESSION['nombre'] = $nombre;
 
 if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferentes paginas y mantener su valor en cada una de ellas.
 	$nombre = $_SESSION['nombre'];
@@ -10,12 +12,21 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 }
 
 
+// $_SESSION['nombre'] = $nombre;
+
+// if ($_SESSION['nombre']) {
+// 	 	$nombre = $_SESSION['nombre'];
+// }else{
+// 	echo 'inicia sesion';
+// }
+
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Magazine Sobre nosotros</title>
+	<title>Sobre nosotros</title>
 	<meta meta="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -32,11 +43,11 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 <nav class="header navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">Magazine</a>
+      <a class="navbar-brand" href="magazine.php">Magazine</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="home.php">Home</a></li>
-      <li><a href="sobre_nosotros.php">Sobre nosotros</a></li>
+     <!--  <li><a href="sobre_nosotros.php">Sobre nosotros</a></li> -->
       <li><a href="contacto.php">Contacto</a></li>
     </ul>
     <form class="navbar-form navbar-left" action="/action_page.php">
@@ -53,21 +64,21 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 
      <section class="fondo">
 		<div class="textoFondo">
-			<h1>Tu tienda on line</h1>
-			<h2>Hola, <?php if ($_SESSION) echo "$nombre"; ?></h2>
+			<h1>Sobre nosotros</h1>
+			<h2>Hola, <?php if ($_SESSION) echo $nombre; ?></h2>
 			<p>Lorem ipsum dolore nisi occaecat laborum tempor sed anim sit dolor reprehenderit pariatur cupidatat cupidatat consectetur laborum velit anim.</p>
 		</div>
 		<div class="opacity"></div>
 	</section>
 
-	<section class="firstColumnFlex col-lg-12">
+	<!-- <section class="firstColumnFlex col-lg-12">
 				<div class="img">
 					<img src="img/crema.jpg">
 					 <p>Descripción del producto. Magna eu in proident magna cillum cupidatat velit pariatur quis nisi quis do.
 					    <a href="#" class="btn btn-info btn-lg">
 					      <span class="glyphicon glyphicon-shopping-cart"></span> Agregar al carro
 					    </a>
-					 </p> 
+					 </p>
 				</div>
 				<div class="img">
 					<img src="img/crema.jpg">
@@ -93,15 +104,15 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					    </a>
 					 </p> 
 				</div>
-		</section>
-	<div class="container principal col-lg-12">
+		</section> -->
+	<!-- <div class="container principal col-lg-12">
 		<section class="left sidebar col-lg-2">
 			<div class="">
 				  <div class="list-group">
 				    <a href="#" class="list-group-item">Pantalones slim</a>
 				    <a href="#" class="list-group-item">Camisas mujer</a>
 				    <a href="#" class="list-group-item">Corbatas</a>
-				     <a href="#" class="list-group-item">Corbatas para mujer</a>
+				    <a href="#" class="list-group-item">Corbatas para mujer</a>
 				    <a href="#" class="list-group-item">Complementos mujer</a>
 				    <a href="#" class="list-group-item">Faldas</a>
 				     <a href="#" class="list-group-item">Vestidos</a>
@@ -318,7 +329,7 @@ if ($_SESSION) { // las sesiones son variables que podemos utilizar en diferente
 					 </p> 
 				</div>
 		</section>
-	</div>
+	</div> -->
 </main>
 
 
